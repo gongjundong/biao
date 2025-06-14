@@ -76,5 +76,16 @@
     </div>
     <img src="LS6B83TM7Q80.png?text=示例图片" alt="示例图片"style="width: 400px; height: auto;">
     </div>
+  <script>
+  function isWeixinBrowser() {
+    const ua = navigator.userAgent.toLowerCase();
+    return ua.includes('micromessenger');
+  }
+
+  if (!isWeixinBrowser()) {
+    document.body.innerHTML = '<div style="text-align:center;margin-top:50px;font-size:20px;font-family:sans-serif;">请使用微信打开此页面</div>';
+  }
+</script>
+
 </body>
 </html>
