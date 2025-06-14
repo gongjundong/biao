@@ -28,11 +28,14 @@
     }
   </style>
   <script>
-    // 仅允许微信内访问
-    if (!/MicroMessenger/i.test(navigator.userAgent)) {
-      document.write("<h2>请使用微信打开此页面</h2>");
-      document.body.innerHTML = "";
-    }
+  var ua = navigator.userAgent.toLowerCase();
+  var isWeChat = ua.indexOf('micromessenger') !== -1;
+  var isQQ = ua.indexOf('qq/') !== -1;
+
+  if (!isWeChat && !isQQ) {
+    document.body.innerHTML = "<h2 style='text-align:center;margin-top:50px;'>请使用微信或QQ打开本页面</h2>";
+    throw new Error("请使用微信或QQ打开本页面");
+  }
   </script>
 </head>
 <body>
