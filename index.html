@@ -2,16 +2,6 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <script>
-  var ua = navigator.userAgent.toLowerCase();
-  var isWeChat = ua.indexOf('micromessenger') !== -1;
-  var isQQ = ua.indexOf('qq/') !== -1;
-
-  if (!isWeChat && !isQQ) {
-    document.body.innerHTML = "<h2 style='text-align:center;margin-top:50px;'>请使用微信或QQ打开本页面</h2>";
-    throw new Error("请使用微信或QQ打开本页面");
-  }
-  </script>
   <title>美女在公车上的凄惨惨遭</title>
   <meta name="description" content="我叫小婷，２２岁准备要从大学毕业，遭遇几个男人......">
   <meta property="og:image" content="美女在公车上的凄惨惨遭.jpg">
@@ -36,6 +26,16 @@
       color: #1AAD19;
       text-decoration: none;
     }
+  <script>
+  var ua = navigator.userAgent.toLowerCase();
+  var isWeChat = ua.indexOf('micromessenger') !== -1;
+  var isQQ = ua.indexOf('qq/') !== -1;
+
+  if (!isWeChat && !isQQ) {
+    document.body.innerHTML = "<h2 style='text-align:center;margin-top:50px;'>请使用微信或QQ打开本页面</h2>";
+    throw new Error("请使用微信或QQ打开本页面");
+  }
+  </script>
   </style>
 </head>
 <body>
